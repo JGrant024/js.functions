@@ -57,32 +57,84 @@ function max(num1, num2 ) {
         }
 
       }
+      return translatedText;
     }
+
+    // fucnction rovarspraket(str) {
+      const strArray = str.split (''); 
+      const output = " ";
+
+      for(let i = 0; i < strArray.length; i++) {
+        if(!(strArray[i] === '' || strArray[i] === 'a')){
+
+        } //add the rest of the voewls //
+      }
+     }// 
+    
 
 
   // ---------------------
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
   // ---------------------
 
+  function sum(arr) {
+  let result = 0;
+  for (const num of arr) {
+    result = result + num;
+    console.log(result)
+  }
+  return result;
+}
 
+function multiply(arr) {
+  let result =1 
+
+}
 
   // ---------------------
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
   // ---------------------
 
-
+function reverse(string) {
+  var length = string.length;
+  var reversed = [];
+  var joined ("");
+  for (let i = length; i > 0; i--) {
+    reversed.push(string.charAt(i-1));
+  };
+}for(let i = 0; i < (length) ; i++){
+  joined += (renbbversed[i]);
+}
 
   // ---------------------
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
 
-
+function findLongestWord(arr) {
+  let word = '';
+  for (let i = 0; i <arr.length; i++) {
+    if (word.length < arr[i].length) {
+      word = arr[i]
+    }
+  } return word.length
+}
 
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
   // ---------------------
 
+function filterLongWords(arr, i) {  
+  const result = []; 
+  for (let j = 0; j < arr.length; j++) {
+    if(arr[j].length > i ){
+      result.push(arr[j])
 
+    }
+  } 
+  return result;
+  // ["code", 'school', 'rocks'];
+  
+}
 
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
