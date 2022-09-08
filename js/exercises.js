@@ -36,12 +36,28 @@ function max(num1, num2 ) {
   // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
   // ---------------------
 
-
+  function isVowel(str) {
+    str = str.toLowerCase();
+    retrun 'aeiou'.includes(str); 
+  }
 
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
+ 
+    function rovarspraket(text) {
+      let translatedText = "";
+      
+      for(let i = 0; i < text.length; i++) {
+        if('bcdfghjklmnpqrstvwxyz'.includes(text[i])) {
+          translatedText += text[i] + 'o' +text[i]
+        } else {
+          translatedText += text[i];
 
+        }
+
+      }
+    }
 
 
   // ---------------------
