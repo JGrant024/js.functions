@@ -138,7 +138,21 @@ function filterLongWords(arr, i) {
 
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
-  // ---------------------
+  // --------------------- 
+
+  function charFreq(str) {
+    const freqList = {}; // initialize an empty object (this is where we keep track of our frequency count)
+    const strArray = str.split(''); // this will split the string into an array of strings (e.g. 'friyay' => ['f', 'r', 'i', 'y', 'a', 'y'])
+    for(let i = 0; i < strArray.length; i++){
+        const char = strArray[i];
+        if(freqList[char] !== undefined){
+            freqList[char] = freqList[char] + 1;
+        } else {
+             freqList[char] = 1;
+        }
+    }
+    return freqList;
+}
 
 
   ////////////////////////////////////////////////////////////////////////

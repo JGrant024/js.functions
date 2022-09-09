@@ -256,9 +256,21 @@ var accelerate = function(amount) {
   speed += amount;
 };
 
+
+
 // Put your answer below -------------------------
 
+//  if amount is undefined the amount is not a number 
 
+function acc(amount=1) {
+
+}
+
+    if(amount === undefined) {
+      speed += 1;
+    } else {
+      speed += amount; 
+    }
 
 // -----------------------------------------------
 
