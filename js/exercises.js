@@ -38,7 +38,7 @@ function max(num1, num2 ) {
 
   function isVowel(str) {
     str = str.toLowerCase();
-    retrun 'aeiou'.includes(str); 
+    return 'aeiou'.includes(str); 
   }
 
   // ---------------------
