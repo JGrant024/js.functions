@@ -33,6 +33,11 @@ function doSomethingCool() {
 
 // Put your answer below -------------------------
 
+let doSomethingCooler = function(){
+  console.log('Something Cooler!')
+} 
+doSomethingCooler(); 
+
 
 // -----------------------------------------------
 
@@ -53,6 +58,11 @@ setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
 
+let sayHello = function() {
+  alert("Hello, World, this is anonymous function!");
+}
+
+setTimeout(sayHello, 2000);
 
 // -----------------------------------------------
 
@@ -83,6 +93,8 @@ console.log("The letter is", letter);
 
 // Put your answer below -------------------------
 
+//  c- Z then Y due to the timeout of 1 sec with the letter Y and Z does not have that timeout for it to fire First. 
+
 
 // -----------------------------------------------
 
@@ -105,7 +117,14 @@ var reverseStr = function(str) {
 
 // Put your answer below -------------------------
 
+var reverseStr2 = function(str2) {
+  var arr2;
+  arr2 = str2.split("").reverse().join("");
+    console.log(arr2)
 
+  return arr2;
+};
+reverseStr2('my name is Jonathan')
 
 // -----------------------------------------------
 
@@ -140,6 +159,12 @@ var spanishColor = function(colorName) {
 
 // Put your answer below -------------------------
 
+const color = {'rojo':"#ff0000", 'blanco':"#ffffff", 'azul':"#0000ff", 'verde':"#00ff00", 'negro':"#000000"}
+
+var spanishColorObject = function(colorNameObject) {
+  console.log(color[colorNameObject])
+}
+  spanishColorObject('azul')
 
 
 // -----------------------------------------------
@@ -158,6 +183,8 @@ var foo = "bar";
 
 // Put your answer below -------------------------
 
+var foo = ""; 
+ foo = "bar"; 
 
 // -----------------------------------------------
 
@@ -182,7 +209,11 @@ var callTenTimes = function(callback) {
 
 // Put your answer below -------------------------
 
+var callNtimes = function(N) {
+  var range = Array.from(Array(N).keys());
+  range.forEach(callNtimes)};
 
+  callNtimes(5)
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -210,7 +241,19 @@ var decreaseScore = function() {
 
 // Put your answer below -------------------------
 
+let increaseScoreSolution = function() {
+  let scoreSolution = 0; 
+  scoreSolution++;
+  console.log("local-scope", scoreSolution)
+};
 
+let decreaseScoreSolution = function() {
+  scoreSolution--;
+};
+ increaseScoreSolution()
+//  console.log("global-scope", scoreSolution)
+
+// The above errors out since scoreSoliton is locally scoped and we're trying to access outside of the function. 
 
 // -----------------------------------------------
 
@@ -231,8 +274,20 @@ var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
 
+var addNumbers = function(numberA, numberB) {
+  console.log("the sum is", numberA + numberB);
+};
 
 
+
+let twoPlusFour = function(){
+  addNumbers(2,4);
+} 
+twoPlusFour()
+let twoPlusThree = function(){
+  addNumbers(2,3);
+} 
+twoPlusThree()
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -251,6 +306,7 @@ var twoPlusTwo = addNumbers(2,2);
 // amount of 1 if no param is given.
 
 var speed = 0;
+ 
 
 var accelerate = function(amount) {
   speed += amount;
@@ -259,18 +315,23 @@ var accelerate = function(amount) {
 
 
 // Put your answer below -------------------------
+var speed = 0;
+ 
 
+var accelerator = function(amount2 = 0) {
+  console.log("The speed is ", amount2)
+  speed += amount2;
+};
+accelerator(4)
 //  if amount is undefined the amount is not a number 
+var speed = 0;
 
-function acc(amount=1) {
+var accelerate = function(amount) {
+  speed += amount;
+};
+  accelerate()
 
-}
-
-    if(amount === undefined) {
-      speed += 1;
-    } else {
-      speed += amount; 
-    }
+//The first example doesnt have a default set for the amount. IF no argument is given its undefined due to type.  
 
 // -----------------------------------------------
 
