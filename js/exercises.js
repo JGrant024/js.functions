@@ -103,7 +103,7 @@ function reverse(string) {
     reversed.push(string.charAt(i-1));
   };
 }for(let i = 0; i < (length) ; i++){
-  joined += (renbbversed[i]);
+  joined += (reversed[i]);
 }
 
   // ---------------------
